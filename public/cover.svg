@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-label="Ilustración del avión de papel volando hacia la diana">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#e5eee8"/><stop offset="1" stop-color="#f5efe4"/></linearGradient><filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter></defs>
+  <rect width="1200" height="460" fill="url(#sky)"/>
+  <circle cx="997" cy="87" r="70" fill="#e8c68f" opacity=".55"/>
+  <path d="M0 300 241 284 531 313 827 279 1200 300v160H0Z" fill="#dce7dc"/>
+  <path d="M0 349 420 324 727 346 1200 316v144H0Z" fill="#bbd5c8"/>
+  <path d="M0 395 1200 362v98H0Z" fill="#e9ddc7"/>
+  <ellipse cx="844" cy="388" rx="143" ry="34" fill="#3d5d53" opacity=".14" filter="url(#shadow)"/>
+  <ellipse cx="829" cy="375" rx="110" ry="32" fill="#f7eee0" stroke="#809b91" stroke-width="3"/>
+  <ellipse cx="829" cy="375" rx="91" ry="26" fill="#be7154"/>
+  <ellipse cx="829" cy="375" rx="61" ry="18" fill="#f7eee0"/>
+  <ellipse cx="829" cy="375" rx="35" ry="10" fill="#d4aa67"/>
+  <ellipse cx="829" cy="375" rx="11" ry="4" fill="#274e50"/>
+  <path d="M246 213c126-76 268-32 369 31" fill="none" stroke="#78a29a" stroke-width="3" stroke-dasharray="5 16"/>
+  <path d="m402 82 337 84-226 86-19-77-92-93Z" fill="#fdf9eb" stroke="#79918a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m402 82 92 93 245-9Z" fill="#fffdf4"/>
+  <path d="m494 175 19 77 226-86Z" fill="#b8d2c9"/>
+  <path d="m402 82 92 93 19 77" fill="none" stroke="#8ea69b" stroke-width="2"/>
+  <text x="50" y="66" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="6" fill="#385e57">UNA-MAS-GAMES / 003</text>
+  <text x="50" y="431" font-family="Georgia,serif" font-size="31" fill="#274e50">Una suelta. Un aterrizaje. Una más.</text>
+</svg>
