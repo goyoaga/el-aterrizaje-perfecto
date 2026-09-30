@@ -165,7 +165,7 @@ function drawTarget(x) {
 
 function drawPlane(x, y, tilt, progress) {
   const shadowWidth = 27 + progress * 54;
-  ellipse(x + 16, WORLD.groundY + 34, shadowWidth, 8 + progress * 9, `rgba(47,61,50,${0.09 + progress * 0.15})`);
+  ellipse(x, WORLD.groundY + 4, shadowWidth, 8 + progress * 9, `rgba(47,61,50,${0.09 + progress * 0.15})`);
   ctx.save(); ctx.translate(x, y); ctx.rotate(tilt);
   ctx.shadowColor = 'rgba(27,56,57,.22)'; ctx.shadowBlur = 22; ctx.shadowOffsetY = 11;
   path([[-76,-38], [70,-3], [-54,44], [-21,2]], '#fefbf1', '#839a94', 2);
@@ -182,7 +182,7 @@ function drawFlightTrail(x, y, progress) {
   ctx.beginPath(); ctx.moveTo(releaseX - 54, WORLD.startY + 7);
   for (let i = 1; i <= 24; i++) {
     const t = progress * i / 24;
-    ctx.lineTo(flightX(releaseX, round.wind, t * FLIGHT_SECONDS) - 60, WORLD.startY + (WORLD.groundY - WORLD.startY) * (t * t * (3 - 2 * t)) + 7);
+    ctx.lineTo(flightX(releaseX, round.wind, t * FLIGHT_SECONDS) - 60, WORLD.startY + (WORLD.groundY - 22 - WORLD.startY) * (t * t * (3 - 2 * t)) + 7);
   }
   ctx.stroke(); ctx.restore();
 }
@@ -195,7 +195,7 @@ function draw(now) {
   const x = phase === 'ready' ? waitingX(now - roundStarted) : phase === 'result' ? finalResult.x : flightX(releaseX, round.wind, Math.min(FLIGHT_SECONDS, (now - flightStarted) / 1000));
   const progress = phase === 'ready' ? 0 : phase === 'result' ? 1 : Math.min(1, (now - flightStarted) / (FLIGHT_SECONDS * 1000));
   const eased = progress * progress * (3 - 2 * progress);
-  const y = WORLD.startY + (WORLD.groundY - WORLD.startY) * eased;
+  const y = WORLD.startY + (WORLD.groundY - 22 - WORLD.startY) * eased;
   if (phase === 'flying') drawFlightTrail(x, y, progress);
   if (phase === 'result') {
     ctx.strokeStyle = 'rgba(39,78,80,.7)'; ctx.lineWidth = 2; ctx.setLineDash([8, 8]);
