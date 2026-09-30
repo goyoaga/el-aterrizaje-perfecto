@@ -103,6 +103,7 @@ function finish() {
   }
   $('best').textContent = `MEJOR MARCA PERSONAL · ${Math.round(best)} CM`;
   updatePhase();
+  if (window.innerWidth <= 700) $('result').scrollIntoView({ block: 'nearest', behavior: reduceMotion.matches ? 'instant' : 'smooth' });
   sound(finalResult.category === 'perfect' ? 'success' : 'ready', { emphasis: finalResult.category === 'perfect' ? 'strong' : 'subtle' });
   if (finalResult.category === 'perfect') celebrate();
   trackCompletedRound();
