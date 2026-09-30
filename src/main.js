@@ -85,8 +85,12 @@ function celebrate() {
 }
 
 function trackCompletedRound() {
-  try { window.goatcounter?.count?.({ path: 'ronda-completada', title: 'Ronda completada', event: true, no_session: true }); }
-  catch { /* Analytics is optional and never affects play. */ }
+  const send = () => {
+    try { window.goatcounter?.count?.({ path: 'ronda-completada', title: 'Ronda completada', event: true, no_session: true }); }
+    catch { /* Analytics is optional and never affects play. */ }
+  };
+  if (window.goatcounter?.count) send();
+  else document.querySelector('script[data-goatcounter]')?.addEventListener('load', send, { once: true });
 }
 
 function finish() {
