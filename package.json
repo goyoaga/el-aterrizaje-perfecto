@@ -1,0 +1,17 @@
+{
+  "name": "el-aterrizaje-perfecto",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "cuelume": "0.2.4"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}
