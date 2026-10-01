@@ -88,6 +88,6 @@ La posición dibujada en el último fotograma y el número del resultado utiliza
 
 <div align="center">
 
-Hecho para **UNA-MAS-GAMES** · una partida más y seguimos.
+Hecho para **UNAMAS GAMES** · una partida más y seguimos.
 
 </div>
